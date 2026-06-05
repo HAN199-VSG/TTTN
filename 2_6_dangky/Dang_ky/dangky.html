@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tài Khoản</title>
+    <link rel="stylesheet" href="dangnhap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../image/Logo-myE.png" alt="logo">
+        </div>
+
+        <nav>
+            <a href="#">Trang Chủ</a>
+            <a href="#">Trò Chơi</a>
+            <a href="#">Nạp Game</a>
+            <a href="#">Tin Tức</a>
+            <a href="#">Hỗ Trợ</a>
+        </nav>
+
+       <button class="btn-register" onclick="goToLogin()">
+            ĐĂNG NHẬP
+        </button>
+    </header>
+
+    <div class="register-container">
+        <form class="register-form">
+            <div class="register-box">
+                <h2>ĐĂNG KÝ TÀI KHOẢN</h2>
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Tên đăng nhập hoặc Email">
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" placeholder="Mật khẩu">
+                    <i class="fa-regular fa-eye eye" onclick="togglePassword('password')"></i>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="repassword" placeholder="Nhập lại mật khẩu">
+                    <i class="fa-regular fa-eye eye" onclick="togglePassword('repassword')"></i>
+                </div>
+            </div>
+
+            <div class="register-box">
+                <h3>THÔNG TIN TÀI KHOẢN</h3>
+
+                <label>Họ và tên (*)</label>
+                <input class="form-input" type="text" placeholder="Họ và tên">
+
+                <label>Giới tính (*)</label>
+                <div class="gender">
+                    <label><input type="radio" name="gender"> Nam</label>
+                    <label><input type="radio" name="gender"> Nữ</label>
+                </div>
+
+                <label>Ngày sinh (*)</label>
+                <input class="form-input" type="date">
+
+                <label>Địa chỉ (*)</label>
+                <input class="form-input" type="text" placeholder="Địa chỉ">
+
+                <label>Email (*)</label>
+                <input class="form-input" type="email" placeholder="Email">
+
+                <label>Số điện thoại (*)</label>
+                <input class="form-input" type="text" placeholder="Số điện thoại">
+
+                <label>Mã xác thực (*)</label>
+                <div class="captcha">
+                    <input type="text" placeholder="Nhập mã">
+                    <span id="captchaText">VNW27C</span>
+                    <button type="button" onclick="createCaptcha()">↻</button>
+                </div>
+
+                <button type="submit" class="btn-register">ĐĂNG KÝ</button>
+
+                <p class="note">
+                    Bằng việc click vào nút Đăng Ký, bạn đã đồng ý với Điều khoản sử dụng
+                </p>
+
+                <div class="text">hoặc</div>
+
+                <button type="button" class="btn-login" onclick="goToLogin()">
+                    ĐĂNG NHẬP
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <img src="../image/Logo-myE.png" alt="logo">
+        <p>Email: hotro@mye.vn</p>
+        <p>Website nạp game trực tuyến</p>
+        <p>Chịu trách nhiệm quản lý nội dung: Ông Lâm Trung Hiệp</p>
+        <p>Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</p>
+        <p>Giấy phép G1 số: Số 297/GP-BTTTT, Ngày cấp 14/07/2020, Nơi cấp Bộ Thông Tin và Truyền Thông</p>
+        <p>Điều khoản dịch vụ | Chính sách bảo mật</p>
+        <p>©Copyright © 2026 MYE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="dangky.js" defer></script>
+</body>
+</html>
