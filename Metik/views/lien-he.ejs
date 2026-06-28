@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ - METIK</title>
+  <meta name="description" content="Liên hệ với nhãn hàng bánh snack METIK - Chạm Mê Tít qua số điện thoại, email hoặc gửi biểu mẫu thắc mắc/đóng góp ý kiến.">
+  
+  <link rel="icon" href="https://metik.vn/wp-content/uploads/2026/06/cropped-faviconmetik-32x32.png" sizes="32x32">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <%- include('partials/header') %>
+
+  <!-- --- PAGE BANNER --- -->
+  <section class="page-banner">
+    <img src="https://metik.vn/wp-content/uploads/2021/05/banner-metik-2-1-scaled.webp" alt="Liên hệ banner" class="page-banner-bg">
+    <div class="page-banner-overlay"></div>
+    <div class="page-banner-content">
+      <h1 class="page-banner-title">Liên hệ</h1>
+      <nav class="breadcrumbs">
+        <a href="/">Trang chủ</a>
+        <span>/</span>
+        <span>Liên hệ</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- --- MAIN CONTENT --- -->
+  <main>
+    <section class="section-padding">
+      <div class="container">
+        
+        <div class="contact-grid">
+          <!-- Left: Contact Information -->
+          <div class="contact-info-card">
+            <h3>Thông tin kết nối</h3>
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="contact-info-content">
+                  <h4>Điện thoại</h4>
+                  <p><a href="tel:0797213333">(+84) 79 721 3333</a></p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-info-content">
+                  <h4>Email hỗ trợ</h4>
+                  <p><a href="mailto:info@hfoods.vn">info@hfoods.vn</a></p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-info-content">
+                  <h4>Địa chỉ nhà máy</h4>
+                  <p>Lô C3-1, Đường D2-N7, KCN Tân Phú Trung, Xã Củ Chi, TP. Hồ Chí Minh</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+                <div class="contact-info-content">
+                  <h4>Giờ làm việc</h4>
+                  <p>Thứ Hai - Thứ Bảy: 08:00 - 17:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right: Floating Contact Form -->
+          <div class="contact-form-card">
+            <h3>Gửi tin nhắn cho chúng tôi</h3>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <input type="text" id="name-input" name="name" class="form-control" placeholder=" " required autocomplete="off">
+                <label for="name-input" class="form-label">Họ và tên của bạn</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email-input" name="email" class="form-control" placeholder=" " required autocomplete="off">
+                <label for="email-input" class="form-label">Địa chỉ email</label>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone-input" name="phone" class="form-control" placeholder=" " required autocomplete="off">
+                <label for="phone-input" class="form-label">Số điện thoại</label>
+              </div>
+              <div class="form-group">
+                <textarea id="message-input" name="message" class="form-control" placeholder=" " required></textarea>
+                <label for="message-input" class="form-label">Nội dung tin nhắn...</label>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Gửi liên hệ ngay</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Google Map Section -->
+        <div class="map-section">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.567585149659!2d106.53244777511364!3d10.920430789237209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310b2d6619d65c51%3A0xaa40266b17ad7191!2zQ8O0bmcgdHkgQ-G7lSBQaOG6p24gT0NIQU8!5e0!3m2!1svi!2s!4v1782180477680!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Địa điểm nhà máy OCHAO trên Google Maps"></iframe>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <%- include('partials/footer') %>
+
+</body>
+</html>
