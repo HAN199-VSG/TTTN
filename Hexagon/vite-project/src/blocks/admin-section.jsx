@@ -13,7 +13,6 @@ const AdminSection = ({ container = 'lg', background = {}, padding_x = 4, paddin
   if (background.type === 'gradient') {
     bgStyle.background = `linear-gradient(${background.direction || 'to right'}, ${background.fromColor || '#fff'}, ${background.toColor || '#000'})`;
   }
-  if (background.opacity !== undefined) bgStyle.opacity = background.opacity;
 
   return (
     <section style={{ ...bgStyle, padding: `${(padding_y || 0) * 4}px ${(padding_x || 0) * 4}px` }}>
