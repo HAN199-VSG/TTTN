@@ -1,0 +1,1103 @@
+/* ================================================================
+   CUSTOM PROPERTIES & RESET
+================================================================ */
+:root {
+    --cyan: #00f3ff;
+    --magenta: #d946ef;
+    --gold: #facc15;
+    --purple: #a855f7;
+    --dark: #070212;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--dark);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(7, 2, 18, .5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--magenta);
+    border-radius: 3px;
+}
+
+/* ================================================================
+   HEADER
+================================================================ */
+.site-header {
+    background: #760f99;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .5);
+    height: 80px;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1200px;
+}
+
+.header-logo img {
+    height: 54px;
+    object-fit: contain;
+}
+
+.hd-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(168, 85, 247, 0.6);
+    background: rgba(138, 43, 226, 0.55);
+    color: #fff;
+    font-size: 1.15rem;
+    box-shadow: 0 0 8px rgba(138, 43, 226, .4);
+    transition: all .25s;
+}
+
+.hd-icon:hover {
+    background: rgba(138, 43, 226, 0.85);
+    border-color: var(--cyan);
+    color: var(--cyan);
+    box-shadow: 0 0 14px rgba(0, 243, 255, .5);
+    transform: translateY(-2px);
+}
+
+.btn-dangnhap {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.btn-dangnhap img {
+    height: 44px;
+    object-fit: contain;
+    transition: all .25s;
+}
+
+.btn-dangnhap:hover {
+    filter: drop-shadow(0 0 8px rgba(0, 243, 255, .6));
+    transform: scale(1.04);
+}
+
+/* ================================================================
+   PAGE BACKGROUND
+================================================================ */
+.page-bg {
+    background: url('assets/BGTRANGVOTING.png') top center no-repeat;
+    background-size: 1920px auto;
+    min-height: 100vh;
+}
+
+/* ================================================================
+   HERO SECTION
+================================================================ */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 16px 0;
+}
+
+.hero-inner {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-logo {
+    margin-top: -150px;
+    position: relative;
+    z-index: 1001;
+}
+
+.hero-logo img {
+    width: 465px;
+    height: 465px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 16px rgba(168, 85, 247, .55));
+    animation: floatY 4s ease-in-out infinite;
+}
+
+.hero-banner img {
+    max-width: 680px;
+    width: 90vw;
+    filter: drop-shadow(0 4px 20px rgba(168, 85, 247, .4));
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Nút "Tham Gia Ngay" */
+.btn-join {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -58%);
+    z-index: 10;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 180px;
+    height: 167px;
+    transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), filter .3s;
+}
+
+.btn-join img {
+    width: 100%;
+    filter: drop-shadow(0 0 10px rgba(234, 179, 8, .5));
+}
+
+.btn-join:hover {
+    transform: translate(-50%, -58%) scale(1.08);
+    filter: drop-shadow(0 0 20px rgba(234, 179, 8, .85));
+}
+
+/* Nav bar */
+.nav-bar {
+    height: 86px;
+    background: url('assets/khungdautrang.png') center / 100% 100% no-repeat;
+    padding: 0 70px;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    padding: 0;
+    max-width: 130px;
+    display: inline-block;
+    transition: transform .25s, filter .25s;
+}
+
+.nav-item img {
+    width: 100%;
+}
+
+.nav-item:hover {
+    transform: scale(1.07) translateY(-2px);
+    filter: brightness(1.15) drop-shadow(0 0 7px rgba(0, 243, 255, .55));
+}
+
+/* ================================================================
+   REGISTER SECTION
+================================================================ */
+.register-heading img {
+    max-width: 480px;
+    width: 70vw;
+    filter: drop-shadow(0 0 14px rgba(168, 85, 247, .7));
+}
+
+.register-card {
+    max-width: 1200px;
+    background: transparent;
+}
+
+/* ================================================================
+   CỘT TRÁI — ẢNH
+================================================================ */
+.col-photos {
+    width: 803px;
+}
+
+.photo-main {
+    cursor: pointer;
+    border-radius: 8px;
+    width: 803px;
+    height: 503px;
+    transition: filter .25s;
+}
+
+.photo-main:hover {
+    box-shadow: 0 0 14px rgba(0, 243, 255, .4);
+}
+
+.photo-main-img {
+    object-fit: cover;
+}
+
+.photo-main-hover {
+    inset: 0;
+    background: rgba(7, 2, 18, .65);
+    opacity: 0;
+    transition: opacity .25s;
+    color: var(--cyan);
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.photo-main-hover i {
+    font-size: 1.8rem;
+}
+
+.photo-main:hover .photo-main-hover {
+    opacity: 1;
+}
+
+.photo-subs {
+    gap: 4px;
+}
+
+.photo-sub {
+    width: 265px;
+    height: 190px;
+    cursor: pointer;
+    border-radius: 0 0 6px 6px;
+    transition: filter .25s;
+    flex-shrink: 0;
+}
+
+.photo-sub:hover {
+    box-shadow: 0 0 10px rgba(217, 70, 239, .4);
+}
+
+.photo-sub img {
+    object-fit: cover;
+}
+
+.sub-hover {
+    inset: 0;
+    background: rgba(7, 2, 18, .55);
+    color: var(--magenta);
+    font-size: 1.3rem;
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.photo-sub:hover .sub-hover {
+    opacity: 1;
+}
+
+.note-text {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, .45);
+    font-weight: 500;
+}
+
+/* ================================================================
+   CỘT PHẢI — THÔNG TIN
+================================================================ */
+.col-info {
+    width: 605px;
+}
+
+.char-info p {
+    font-size: 0.95rem;
+    color: #ddd6f3;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.val-yellow {
+    color: var(--gold);
+    font-weight: 700;
+    margin-left: 4px;
+    text-shadow: 0 0 6px rgba(250, 204, 21, .4);
+}
+
+/* Radio tùy chỉnh */
+.gender-opt {
+    cursor: pointer;
+}
+
+.gender-opt input[type="radio"] {
+    display: none;
+}
+
+.g-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .5);
+    position: relative;
+    transition: all .25s;
+}
+
+.gender-opt input:checked~.g-dot {
+    border-color: var(--cyan);
+    box-shadow: 0 0 8px rgba(0, 243, 255, .6);
+}
+
+.gender-opt input:checked~.g-dot::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--cyan);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.g-img {
+    width: 202px;
+    height: 64px;
+    object-fit: contain;
+    opacity: .75;
+    transition: opacity .25s, filter .25s;
+}
+
+.gender-opt:hover .g-img {
+    opacity: 1;
+}
+
+.gender-opt input:checked~.g-dot~.g-img {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(0, 243, 255, .6));
+}
+
+/* ================================================================
+   INPUT BOXES
+================================================================ */
+.ibox {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+
+.ibox-full {
+    background: url('assets/box text.png') center / 100% 100% no-repeat;
+    width: 605px;
+    height: 70px;
+}
+
+.ibox-half {
+    background: url('assets/boxtextngan.png') center / 100% 100% no-repeat;
+    height: 69px;
+    width: 297px;
+}
+
+.ibox-tall {
+    background: url('assets/boxtext bự.png') center / 100% 100% no-repeat;
+    width: 609px;
+    height: 134px;
+    align-items: flex-start;
+}
+
+.ibox-row {
+    display: flex;
+    width: 605px;
+}
+
+.ibox input,
+.ibox select,
+.ibox textarea {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e1b4b;
+    caret-color: #1e1b4b;
+    resize: none;
+}
+
+.ibox textarea {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.ibox input::placeholder,
+.ibox textarea::placeholder {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.ibox select {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.ibox select.filled {
+    color: #1e1b4b;
+}
+
+.ibox.err {
+    filter: drop-shadow(0 0 6px rgba(239, 68, 68, .7));
+}
+
+/* CMND */
+.cmnd-label {
+    font-size: 0.85rem;
+    color: #fff;
+    letter-spacing: .3px;
+}
+
+.cmnd-row {
+    display: flex;
+    gap: 17px;
+    width: 605px;
+}
+
+.cmnd-box {
+    width: 294px;
+    height: 68px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: border-color .25s, box-shadow .25s;
+    flex-shrink: 0;
+}
+
+.cmnd-box:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 10px rgba(0, 243, 255, .35);
+}
+
+.cmnd-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cmnd-hover {
+    inset: 0;
+    background: rgba(7, 2, 18, .62);
+    color: var(--cyan);
+    font-size: .8rem;
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.cmnd-box:hover .cmnd-hover {
+    opacity: 1;
+}
+
+/* Nút hành động */
+.btn-act {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 307px;
+    height: 92px;
+    transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), filter .3s;
+}
+
+.btn-act img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.btn-act:hover {
+    transform: scale(1.04) translateY(-2px);
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, .65));
+}
+
+/* ================================================================
+   FOOTER
+================================================================ */
+.site-footer {
+    font-size: .78rem;
+    color: rgba(255, 255, 255, .28);
+    background: rgba(7, 2, 18, .9);
+    border-top: 1px solid rgba(138, 43, 226, .18);
+}
+
+/* ================================================================
+   POPUP OVERLAY
+================================================================ */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    backdrop-filter: none;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ----------------------------------------------------------------
+   POPUP BOX — dùng cho popup ảnh (Thể Lệ, Hướng Dẫn)
+   Tỉ lệ ảnh PNG: 1024 × 683
+---------------------------------------------------------------- */
+.popup-box {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 1024 / 683;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .9);
+    transform: scale(.9);
+    transition: transform .35s cubic-bezier(.25, 1, .5, 1);
+}
+
+.popup-overlay.active .popup-box {
+    transform: scale(1);
+}
+
+.popup-img-bg {
+    background-image: var(--popup-bg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Nút đóng — trong suốt, đặt đúng vị trí X built-in trong ảnh
+   Đo từ ảnh: X nằm tại ~ right 5.5%, top 10% */
+.popup-close {
+    position: absolute;
+    top: 9%;
+    right: 4.5%;
+    z-index: 20;
+    width: 7%;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    color: transparent;
+    font-size: 0;
+    cursor: pointer;
+    padding: 0;
+    transition: background .2s;
+}
+
+.popup-close:hover {
+    background: rgba(217, 70, 239, .18);
+}
+
+/* Vùng bấm trong suốt đặt chính xác lên dấu X trong ảnh popup_dangkithanhcong.png */
+#successModalCloseBtn {
+    top: 5% !important;
+    right: 2% !important;
+    width: 14% !important;
+    height: 22% !important;
+    z-index: 999;
+    pointer-events: all;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+
+
+
+
+/* Nội dung cuộn bên trong popup ảnh
+   padding-top ~17% → tránh đè lên banner tiêu đề
+   padding sides ~6% → nằm trong viền khung */
+.popup-scroll {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 17% 7% 6% 7%;
+}
+
+.popup-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+
+.popup-scroll::-webkit-scrollbar-thumb {
+    background: var(--magenta);
+    border-radius: 2px;
+}
+
+.popup-text h5 {
+    color: var(--gold);
+    font-size: .9rem;
+    font-weight: 700;
+    margin: 12px 0 4px;
+}
+
+.popup-text p,
+.popup-text li {
+    font-size: .8rem;
+    color: #c0b4dc;
+    line-height: 1.7;
+}
+
+.popup-text ul {
+    padding-left: 16px;
+}
+
+.popup-text li {
+    margin-bottom: 4px;
+}
+
+/* ----------------------------------------------------------------
+   POPUP THÀNH CÔNG — CYBERPUNK (pixel-perfect theo ảnh mẫu)
+---------------------------------------------------------------- */
+/* Dùng chung popup-img-bg — không cần .popup-success riêng nữa */
+
+/* ===== Nội dung bên trong popup thành công ===== */
+.success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    padding: 20px 28px;
+    height: 100%;
+}
+
+.success-icon {
+    font-size: 3rem;
+    color: #00e5a0;
+    filter: drop-shadow(0 0 10px rgba(0, 229, 160, 0.7));
+    line-height: 1;
+}
+
+.success-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 0 0 12px rgba(255,255,255,0.4);
+}
+
+.success-desc {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.82);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.btn-confirm {
+    margin-top: 6px;
+    padding: 8px 32px;
+    background: linear-gradient(90deg, #00ccff, #a855f7);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    box-shadow: 0 0 14px rgba(0, 200, 255, 0.5);
+}
+
+.btn-confirm:hover {
+    opacity: 0.85;
+    transform: scale(1.04);
+}
+
+.cyber-svg-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Thân popup */
+.success-body-cyber {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Chữ thông báo trắng, đậm, nổi bật */
+.cyber-success-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 10;
+    margin: 0;
+    text-align: center;
+    padding: 10px 24px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.45), 0 0 20px rgba(0, 200, 255, 0.3);
+}
+
+/* Nút X màu hồng neon dạng SVG */
+.popup-close-cyber {
+    position: absolute;
+    top: 18px;
+    right: 28px;
+    width: 32px;
+    height: 32px;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer;
+    z-index: 20;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.popup-close-cyber svg {
+    transition: all 0.25s ease;
+}
+
+.popup-close-cyber:hover svg {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px rgba(255, 0, 204, 0.9));
+}
+
+/* Giữ tỉ lệ hoàn hảo khi co giãn ở màn hình nhỏ */
+@media (max-width: 480px) {
+    .popup-success {
+        width: 92vw !important;
+        height: calc(92vw * 308 / 475) !important;
+    }
+    .cyber-success-title {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+    }
+    .popup-close-cyber {
+        top: 10px;
+        right: 18px;
+        width: 24px;
+        height: 24px;
+    }
+    .popup-close-cyber svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* ================================================================
+   ANIMATIONS
+================================================================ */
+@keyframes floatY {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes cyberBoxPulse {
+    0%, 100% {
+        box-shadow:
+            0 0 30px rgba(0, 243, 255, 0.5),
+            0 0 60px rgba(0, 243, 255, 0.2),
+            inset 0 0 25px rgba(0, 243, 255, 0.15);
+        border-color: #00f3ff;
+    }
+    50% {
+        box-shadow:
+            0 0 50px rgba(0, 243, 255, 0.8),
+            0 0 100px rgba(0, 243, 255, 0.35),
+            inset 0 0 40px rgba(0, 243, 255, 0.25);
+        border-color: #60feff;
+    }
+}
+
+@keyframes cyberTextGlow {
+    0%, 100% {
+        text-shadow:
+            0 0 8px rgba(0, 243, 255, 0.9),
+            0 0 20px rgba(0, 243, 255, 0.5),
+            0 0 40px rgba(0, 243, 255, 0.2);
+        opacity: 1;
+    }
+    45% {
+        text-shadow:
+            0 0 12px rgba(0, 243, 255, 1),
+            0 0 30px rgba(0, 243, 255, 0.8),
+            0 0 60px rgba(0, 243, 255, 0.4);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.85;
+    }
+    55% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 8px rgba(168, 85, 247, .3));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 22px rgba(168, 85, 247, .65));
+    }
+}
+
+/* ================================================================
+   RESPONSIVE
+================================================================ */
+@media (max-width: 1220px) {
+    .register-card {
+        max-width: 960px;
+        padding: 25px 30px;
+    }
+
+    .col-photos {
+        width: 420px;
+    }
+
+    .photo-main {
+        width: 420px;
+        height: 264px;
+    }
+
+    .photo-subs {
+        gap: 6px;
+    }
+
+    .photo-sub {
+        width: 136px;
+        height: 98px;
+    }
+
+    .col-info {
+        width: 480px;
+    }
+
+    .ibox-row,
+    .cmnd-row {
+        width: 480px;
+    }
+
+    .ibox-half {
+        width: 235px;
+    }
+
+    .cmnd-box {
+        width: 231px;
+        height: 53px;
+    }
+}
+
+@media (max-width: 991px) {
+    .register-card {
+        max-width: 900px;
+        padding: 20px 24px;
+    }
+
+    .btn-join {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-bg {
+        background-size: 1100px auto;
+    }
+
+    .form-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-photos {
+        width: 507px;
+    }
+
+    .photo-main {
+        width: 507px;
+        height: 319px;
+    }
+
+    .photo-subs {
+        gap: 3px;
+    }
+
+    .photo-sub {
+        width: 167px;
+        height: 120px;
+    }
+
+    .col-info {
+        width: 605px;
+    }
+
+    .ibox-row,
+    .cmnd-row {
+        width: 605px;
+    }
+
+    .ibox-half {
+        width: 297px;
+    }
+
+    .cmnd-box {
+        width: 294px;
+        height: 68px;
+    }
+
+    .nav-bar {
+        padding: 0 30px;
+    }
+
+    .btn-join {
+        width: 130px;
+    }
+
+    .nav-wrap {
+        margin-top: 28px;
+    }
+
+    .btn-join {
+        position: static;
+        transform: none;
+        margin: 0 auto 10px;
+        display: block;
+    }
+
+    .btn-join:hover {
+        transform: scale(1.06);
+    }
+
+    .nav-bar {
+        background: rgba(8, 3, 20, .9);
+        border: 1px solid rgba(0, 243, 255, .2);
+        border-radius: 8px;
+        height: auto;
+        padding: 10px 14px;
+    }
+
+    .popup-box {
+        max-height: 86vh;
+    }
+
+    .action-row {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 630px) {
+
+    .col-photos,
+    .photo-main,
+    .col-info,
+    .ibox-row,
+    .cmnd-row {
+        width: 100%;
+    }
+
+    .photo-main {
+        height: auto;
+        aspect-ratio: 507/319;
+    }
+
+    .photo-sub {
+        width: 32.5%;
+        height: auto;
+        aspect-ratio: 167/120;
+    }
+
+    .photo-subs {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .ibox-half {
+        width: 49%;
+    }
+
+    .ibox-row {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .cmnd-box {
+        width: 49%;
+        height: auto;
+        aspect-ratio: 294/68;
+    }
+
+    .cmnd-row {
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-card {
+        padding: 16px 14px;
+    }
+
+    .ibox-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ibox-half {
+        width: 100%;
+        background: url('assets/box text.png') center / 100% 100% no-repeat;
+    }
+
+    .cmnd-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cmnd-box {
+        width: 100%;
+    }
+
+    .btn-act {
+        width: 115px;
+    }
+
+    .nav-bar {
+        flex-wrap: wrap;
+        gap: 8px;
+        height: auto;
+    }
+
+    .nav-item {
+        max-width: 80px;
+    }
+}
