@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nạp game trực tuyến tại MyE - Cổng nạp game chính thức, nạp cực đã quà cực cháy">
+    <title>Nạp Game | MyE</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/Nap_game.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="site-header">
+    <nav class="navbar navbar-expand-lg" id="main-navbar">
+        <div class="container-xl">
+            <a class="navbar-brand" href="Nap_game.html" id="nav-logo">
+                <img src="../images/logo.png" alt="MyE Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMain" aria-controls="navbarMain"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#" id="nav-trangchu">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="nav-trochoi">Trò Chơi</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Nap_game.html" id="nav-napgame">Nạp Game</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="nav-tintuc">Tin Tức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="nav-hotro">Hỗ Trợ</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <a href="#" class="btn-dangnhap-img" id="btn-dangky">
+                        <img src="../images/Trang_Chu/button_dangnhap.png" alt="Đăng Nhập" class="btn-dangnhap-png">
+                        <span class="btn-dangnhap-text">ĐĂNG NHẬP</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- ===== HERO BANNER ===== -->
+<section class="hero-banner" id="hero-banner">
+    <div class="container-xl">
+        <div class="hero-banner-card">
+            <img src="../images/Nap_Game/Hero-banner.png" alt="Cổng Nạp Chính Thức – Nạp Cực Đã Quà Cực Cháy" class="hero-img">
+            <a href="Thong_tin_giao_dich.html" class="btn-lichsu-banner" id="btn-lsgd-banner">
+                Lịch sử giao dịch
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main-content" id="main-content">
+    <div class="container-xl">
+
+        <!-- SECTION HEADER: Title + Search -->
+        <div class="game-list-header" id="game-list-header">
+            <h1 class="game-list-title" id="game-list-title">DANH SÁCH GAME</h1>
+            <div class="search-wrap" id="search-wrap">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" class="search-input" id="game-search" placeholder="Hào Khí Chiến Hồn">
+            </div>
+        </div>
+
+        <!-- FILTER TABS -->
+        <div class="filter-tabs-wrap" id="filter-tabs">
+            <button class="filter-tab active" data-genre="all" id="tab-all">
+                TẤT CẢ <span class="tab-badge">60</span>
+            </button>
+            <button class="filter-tab" data-genre="simulation" id="tab-simulation">
+                SIMULATION <span class="tab-badge">4</span>
+            </button>
+            <button class="filter-tab" data-genre="action" id="tab-action">
+                ACTION <span class="tab-badge">11</span>
+            </button>
+            <button class="filter-tab" data-genre="rpg" id="tab-rpg">
+                RPG <span class="tab-badge">37</span>
+            </button>
+            <button class="filter-tab" data-genre="shooting" id="tab-shooting">
+                SHOOTING <span class="tab-badge">5</span>
+            </button>
+            <button class="filter-tab" data-genre="racing" id="tab-racing">
+                RACING <span class="tab-badge">1</span>
+            </button>
+        </div>
+
+        <!-- GAME CARDS GRID — 5 cột -->
+        <div class="game-grid" id="game-grid">
+
+            <!-- MyE Coin -->
+            <div class="game-item" data-genre="all" id="gc-myecoin">
+                <a href="MyE_Coin.html" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/MYECOIN.png" alt="MyE Coin" class="game-thumb">
+                        </div>
+                        <div class="game-info">
+                            <p class="game-name" style="color: var(--accent);">MYE COIN</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Hào Khí Chiến Hồn 1 -->
+            <div class="game-item" data-genre="action" id="gc-hkch1">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(4).png" alt="Hào Khí Chiến Hồn" class="game-thumb">
+                            <div class="game-hover-overlay">
+                                <span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <p class="game-name">HÀO KHÍ CHIẾN HỒN</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Hào Khí Du Hiệp 1 -->
+            <div class="game-item" data-genre="rpg" id="gc-hkdh1">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(1).png" alt="Hào Khí Du Hiệp" class="game-thumb">
+                            <div class="game-hover-overlay">
+                                <span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <p class="game-name">HÀO KHÍ DU HIỆP</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Boom Tank 1 -->
+            <div class="game-item" data-genre="shooting" id="gc-boomtank1">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(2).png" alt="Boom Tank" class="game-thumb">
+                            <div class="game-hover-overlay">
+                                <span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <p class="game-name">BOOM TANK</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Chân Vương 1 -->
+            <div class="game-item" data-genre="rpg" id="gc-chanvuong1">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(3).png" alt="Chân Vương" class="game-thumb">
+                            <div class="game-hover-overlay">
+                                <span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <p class="game-name">CHÂN VƯƠNG</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="game-item" data-genre="shooting" id="gc-boomtank2">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(2).png" alt="Boom Tank" class="game-thumb">
+                            <div class="game-hover-overlay"><span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span></div>
+                        </div>
+                        <div class="game-info"><p class="game-name">BOOM TANK</p></div>
+                    </div>
+                </a>
+            </div>
+            <div class="game-item" data-genre="action" id="gc-hkch2">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(4).png" alt="Hào Khí Chiến Hồn" class="game-thumb">
+                            <div class="game-hover-overlay"><span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span></div>
+                        </div>
+                        <div class="game-info"><p class="game-name">HÀO KHÍ CHIẾN HỒN</p></div>
+                    </div>
+                </a>
+            </div>
+            <div class="game-item" data-genre="rpg" id="gc-hkdh2">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(1).png" alt="Hào Khí Du Hiệp" class="game-thumb">
+                            <div class="game-hover-overlay"><span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span></div>
+                        </div>
+                        <div class="game-info"><p class="game-name">HÀO KHÍ DU HIỆP</p></div>
+                    </div>
+                </a>
+            </div>
+            <div class="game-item" data-genre="shooting" id="gc-boomtank3">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(2).png" alt="Boom Tank" class="game-thumb">
+                            <div class="game-hover-overlay"><span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span></div>
+                        </div>
+                        <div class="game-info"><p class="game-name">BOOM TANK</p></div>
+                    </div>
+                </a>
+            </div>
+            <div class="game-item" data-genre="rpg" id="gc-chanvuong2">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(3).png" alt="Chân Vương" class="game-thumb">
+                            <div class="game-hover-overlay"><span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span></div>
+                        </div>
+                        <div class="game-info"><p class="game-name">CHÂN VƯƠNG</p></div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="game-item" data-genre="shooting" id="gc-boomtank5">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(2).png" alt="Boom Tank" class="game-thumb">
+                            <div class="game-hover-overlay"><span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span></div>
+                        </div>
+                        <div class="game-info"><p class="game-name">BOOM TANK</p></div>
+                    </div>
+                </a>
+            </div>
+            <div class="game-item" data-genre="action" id="gc-hkch3">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(4).png" alt="Hào Khí Chiến Hồn" class="game-thumb">
+                            <div class="game-hover-overlay"><span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span></div>
+                        </div>
+                        <div class="game-info"><p class="game-name">HÀO KHÍ CHIẾN HỒN</p></div>
+                    </div>
+                </a>
+            </div>
+            <div class="game-item" data-genre="rpg" id="gc-hkdh4">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(1).png" alt="Hào Khí Du Hiệp" class="game-thumb">
+                            <div class="game-hover-overlay"><span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span></div>
+                        </div>
+                        <div class="game-info"><p class="game-name">HÀO KHÍ DU HIỆP</p></div>
+                    </div>
+                </a>
+            </div>
+            <div class="game-item" data-genre="shooting" id="gc-boomtank4">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(2).png" alt="Boom Tank" class="game-thumb">
+                            <div class="game-hover-overlay"><span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span></div>
+                        </div>
+                        <div class="game-info"><p class="game-name">BOOM TANK</p></div>
+                    </div>
+                </a>
+            </div>
+            <div class="game-item" data-genre="rpg" id="gc-chanvuong3">
+                <a href="#" class="game-card-link">
+                    <div class="game-card">
+                        <div class="game-thumb-wrap">
+                            <img src="../images/Nap_Game/DS-game_nap/CARD(3).png" alt="Chân Vương" class="game-thumb">
+                            <div class="game-hover-overlay"><span class="btn-nap-now"><i class="bi bi-lightning-fill me-1"></i>Nạp Ngay</span></div>
+                        </div>
+                        <div class="game-info"><p class="game-name">CHÂN VƯƠNG</p></div>
+                    </div>
+                </a>
+            </div>
+
+        </div><!-- end game-grid -->
+
+        <!-- PAGINATION -->
+        <div class="pagination-dots" id="pagination-dots">
+            <span class="dot active" id="dot-1"></span>
+            <span class="dot" id="dot-2"></span>
+            <span class="dot" id="dot-3"></span>
+        </div>
+
+    </div><!-- end container -->
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="site-footer">
+    <div class="container-xl">
+        <div class="footer-content">
+            <img src="../images/logo.png" alt="MyE Logo" class="footer-logo-centered">
+            <div class="footer-info-centered">
+                <p>Email: hotro@mye.vn</p>
+                <p>Hotline: 0902 500 198</p>
+                <h5 class="footer-company-name">CÔNG TY CỔ PHẦN MYE</h5>
+                <p>Chịu trách nhiệm quản lý nội dung: Ông Lâm Trung Hiệp</p>
+                <p>Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</p>
+                <p>Giấy phép G1 số: Số 297/GP-BTTTT, Ngày cấp 14/07/2020, Nơi cấp Bộ Thông Tin và Truyền Thông</p>
+                <p class="footer-policy-links">
+                    <a href="#">Điều khoản dịch vụ</a> | <a href="#">Chính sách bảo mật</a>
+                </p>
+                <p class="footer-copyright">©Copyright © 2026 MYE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Authentication JS -->
+<script src="../assets/js/auth.js"></script>
+<script src="../assets/js/Nap_game.js"></script>
+</body>
+</html>

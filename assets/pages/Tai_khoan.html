@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tài khoản MyE - Quản lý thông tin cá nhân, số dư coin và lịch sử nạp game">
+    <title>Tài Khoản | MyE</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/Tai_khoan.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="site-header">
+    <nav class="navbar navbar-expand-lg" id="main-navbar">
+        <div class="container-xl">
+            <a class="navbar-brand" href="Nap_game.html" id="nav-logo">
+                <img src="../images/logo.png" alt="MyE Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMain" aria-controls="navbarMain"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="Nap_game.html" id="nav-trangchu">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="nav-trochoi">Trò Chơi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Nap_game.html" id="nav-napgame">Nạp Game</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="nav-tintuc">Tin Tức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="nav-hotro">Hỗ Trợ</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <div class="user-avatar-nav" id="user-avatar-nav">
+                        <img src="../images/streamline-kameleon-color_tease-smiley.png" alt="Avatar" class="nav-avatar-img">
+                        <span class="nav-username">Nguyễn Văn A</span>
+                        <i class="bi bi-chevron-down ms-1" style="font-size:0.75rem; color:var(--text-muted)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- ===== HERO BANNER ===== -->
+<section class="hero-banner" id="hero-banner">
+    <div class="hero-banner-card">
+        <img src="../images/tai_khoan/bannerdautrang.png" alt="Tài Khoản MyE" class="hero-img">
+        
+        <div class="container-xl position-relative h-100">
+            <div class="hero-user-info-wrap">
+                <div class="hero-avatar-circle">
+                    <img src="../images/streamline-kameleon-color_tease-smiley.png" alt="User Avatar" class="hero-avatar-emoji">
+                </div>
+                <div class="hero-user-details-box">
+                    <div class="hero-name-label" id="hero-username">Nguyễn Văn A</div>
+                    <div class="hero-meta-row">
+                        <i class="bi bi-person-fill"></i>
+                        Tài khoản: <span id="hero-meta-acc">fb.112314335</span>
+                    </div>
+                    <div class="hero-meta-row">
+                        <i class="bi bi-lock-fill"></i>
+                        MYE ID: <span id="hero-meta-id">1123123214</span>
+                    </div>
+                    <div class="hero-meta-row">
+                        <i class="bi bi-calendar-event"></i>
+                        Ngày tạo tài khoản: <span id="hero-meta-date">19/06/2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-tabs">
+                <button class="banner-tab active" data-tab="profile">Tài khoản</button>
+                <button class="banner-tab" data-tab="security">Bảo mật</button>
+                <button class="banner-tab" data-tab="transactions">Lịch sử giao dịch</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main-content">
+    <div class="profile-main-container">
+        
+        <!-- === Security Indicator Card === -->
+        <div class="security-progress-card">
+            <div class="security-gauge-wrap">
+                <img src="../images/tai_khoan/20%25.png" alt="20%" class="security-gauge-img">
+            </div>
+            <div class="security-gauge-text-block">
+                <h4 class="security-card-title">Mức độ bảo mật</h4>
+                <p class="security-card-desc mb-0">Tài khoản của bạn hiện tại có thể bị đe dọa bảo mật. Hãy hoàn thiện các thông tin bên dưới.</p>
+            </div>
+        </div>
+
+        <!-- === Section Heading === -->
+        <div class="account-section-heading">
+            <h3 class="account-heading-title">Thông tin tài khoản</h3>
+            <p class="account-heading-sub mb-0">Bạn có thể cập nhật Hồ sơ Công khai của mình tại đây và thông tin sẽ tự động đồng bộ tất cả các tài khoản Game đã được kết nối.</p>
+        </div>
+
+        <!-- === PROFILE TAB === -->
+        <div class="tab-pane active" id="tab-profile">
+            
+            <!-- Card 1: Thông tin cá nhân -->
+            <div class="content-panel" id="tab-profile-card">
+                <div class="panel-header">
+                    <div class="panel-icon-circle">
+                        <img src="../images/streamline-kameleon-color_tease-smiley.png" alt="Mascot Emoji" class="panel-avatar-emoji">
+                    </div>
+                    <div class="flex-grow-1 ms-3 text-start">
+                        <h2 class="panel-title-custom">Thông tin cá nhân</h2>
+                        <p class="panel-sub mb-0" style="color: #ff6b00; font-weight: 600; font-size: 0.75rem; text-align: left;">Chưa hoàn thiện</p>
+                    </div>
+                    <!-- Display mode action -->
+                    <div id="display-header-actions">
+                        <button class="btn-edit-profile" id="btn-edit-profile">Chỉnh Sửa</button>
+                    </div>
+                    <!-- Edit mode actions -->
+                    <div id="edit-header-actions" style="display: none; gap: 10px;">
+                        <button class="btn-cancel-profile" id="btn-cancel-profile" style="border: 1.5px solid #1a4fbc; background: #ffffff; color: #1a4fbc; border-radius: 6px; padding: 6px 20px; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; cursor: pointer; transition: all 0.2s;">HỦY</button>
+                        <button class="btn-save-profile" id="btn-save-profile" style="background: #ff6b00; border: none; color: #ffffff; border-radius: 6px; padding: 6px 20px; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 5px rgba(255, 107, 0, 0.2);">LƯU</button>
+                    </div>
+                </div>
+                <div class="profile-form-body">
+                    
+                    <!-- Flat display info -->
+                    <div class="profile-fields-display" id="profile-fields-display">
+                        <div class="info-row">
+                            <span class="info-row-label">
+                                <i class="bi bi-person-fill"></i> Họ và tên
+                            </span>
+                            <span class="info-row-value" id="disp-name">Nguyễn Văn A</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-row-label">
+                                <i class="bi bi-people-fill"></i> Giới tính
+                            </span>
+                            <span class="info-row-value" id="disp-gender">Nam</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-row-label">
+                                <i class="bi bi-calendar3"></i> Ngày sinh
+                            </span>
+                            <span class="info-row-value" id="disp-dob">01/01/1999</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-row-label">
+                                <i class="bi bi-geo-alt-fill"></i> Địa chỉ
+                            </span>
+                            <span class="info-row-value" id="disp-address">TP. Hồ Chí Minh</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-row-label">
+                                <i class="bi bi-envelope-fill"></i> Email
+                            </span>
+                            <span class="info-row-value" id="disp-email">
+                                Gameee@gmail.com <i class="bi bi-check-circle-fill text-success ms-1" style="font-size:0.95rem;"></i>
+                            </span>
+                        </div>
+                        <div class="info-row full-width">
+                            <span class="info-row-label">
+                                <i class="bi bi-telephone-fill"></i> Số điện thoại
+                            </span>
+                            <span class="info-row-value text-muted" id="disp-phone">Chưa có số điện thoại</span>
+                            <div style="margin-left: auto;">
+                                <button class="btn-verify-phone-action">Liên kết xác thực</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Editable Fields (FORM STYLE, toggled on edit click) -->
+                    <div class="profile-fields-edit" id="profile-fields-edit" style="display: none;">
+                        <!-- Row 1: Họ và tên -->
+                        <div class="info-row align-items-center">
+                            <span class="info-row-label">
+                                <i class="bi bi-person-fill"></i> Họ và tên
+                            </span>
+                            <div style="width: 100%; max-width: 560px;">
+                                <input type="text" class="mye-input-edit" id="pf-name" value="Nguyễn Văn A" style="width: 100%; height: 40px; border: 1.5px solid #cbd5e1; border-radius: 6px; padding: 8px 16px; font-size: 0.82rem; font-weight: 600; color: var(--text-dark); background: #ffffff;">
+                            </div>
+                        </div>
+                        
+                        <!-- Row 2: Giới tính -->
+                        <div class="info-row align-items-center">
+                            <span class="info-row-label">
+                                <i class="bi bi-people-fill"></i> Giới tính
+                            </span>
+                            <div style="width: 100%; max-width: 560px; position: relative;">
+                                <select class="mye-select-edit" id="pf-gender-select" style="width: 100%; height: 40px; border: 1.5px solid #cbd5e1; border-radius: 6px; padding: 8px 36px 8px 16px; font-size: 0.82rem; font-weight: 600; color: var(--text-dark); appearance: none; background: #ffffff; cursor: pointer;">
+                                    <option value="Nam" selected>Nam</option>
+                                    <option value="Nữ">Nữ</option>
+                                    <option value="Khác">Khác</option>
+                                </select>
+                                <i class="bi bi-chevron-down" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--primary); pointer-events: none; font-size: 0.9rem;"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Row 3: Ngày sinh -->
+                        <div class="info-row align-items-center">
+                            <span class="info-row-label">
+                                <i class="bi bi-calendar3"></i> Ngày sinh
+                            </span>
+                            <div style="width: 100%; max-width: 560px; position: relative;">
+                                <input type="text" class="mye-input-edit" id="pf-dob" value="01/01/1999" style="width: 100%; height: 40px; border: 1.5px solid #cbd5e1; border-radius: 6px; padding: 8px 36px 8px 16px; font-size: 0.82rem; font-weight: 600; color: var(--text-dark); background: #ffffff;">
+                                <i class="bi bi-calendar3" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--primary); pointer-events: none; font-size: 0.85rem;"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Row 4: Địa chỉ -->
+                        <div class="info-row align-items-center">
+                            <span class="info-row-label">
+                                <i class="bi bi-geo-alt-fill"></i> Địa chỉ
+                            </span>
+                            <div style="width: 100%; max-width: 560px;">
+                                <input type="text" class="mye-input-edit" id="pf-address" value="TP. Hồ Chí Minh" style="width: 100%; height: 40px; border: 1.5px solid #cbd5e1; border-radius: 6px; padding: 8px 16px; font-size: 0.82rem; font-weight: 600; color: var(--text-dark); background: #ffffff;">
+                            </div>
+                        </div>
+                        
+                        <!-- Row 5: Email (Static) -->
+                        <div class="info-row">
+                            <span class="info-row-label">
+                                <i class="bi bi-envelope-fill"></i> Email
+                            </span>
+                            <span class="info-row-value" style="font-weight: 500; font-size: 0.82rem; color: #64748b;">
+                                Gameee@gmail.com <i class="bi bi-check-circle-fill text-success ms-1" style="font-size:0.95rem;"></i>
+                            </span>
+                        </div>
+                        
+                        <!-- Row 6: Số điện thoại (Static) -->
+                        <div class="info-row full-width">
+                            <span class="info-row-label">
+                                <i class="bi bi-telephone-fill"></i> Số điện thoại
+                            </span>
+                            <span class="info-row-value text-muted" style="font-weight: 500; font-size: 0.82rem;">Chưa có số điện thoại</span>
+                            <div style="margin-left: auto;">
+                                <button class="btn-verify-phone-action">Liên kết xác thực</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Đồng bộ tài khoản -->
+            <!-- Card 2: Đồng bộ tài khoản -->
+            <div class="content-panel mt-4" id="sync-account-card">
+                <div class="panel-header" id="sync-header-toggle" style="cursor: pointer;">
+                    <div class="panel-icon-circle">
+                        <img src="../images/streamline-kameleon-color_tease-smiley.png" alt="Mascot Emoji" class="panel-avatar-emoji">
+                    </div>
+                    <div class="flex-grow-1 ms-3 text-start">
+                        <h2 class="panel-title-custom">Đồng bộ tài khoản</h2>
+                    </div>
+                    <div class="panel-toggle-arrow-circle" id="sync-arrow-wrap">
+                        <i class="bi bi-chevron-right" id="sync-arrow-icon" style="display: inline-block; transition: transform 0.2s;"></i>
+                    </div>
+                </div>
+                
+                <div class="sync-body-content" id="sync-body-content" style="display: block; padding: 20px 24px; border-top: 1px solid var(--border);">
+                    
+                    <!-- STATE 1: COLLAPSED STATUS ROW (FACEBOOK <-> MYE) -->
+                    <div id="sync-collapsed-status-row">
+                        <p class="sync-intro-text text-start mb-3" style="font-size: 0.8rem; font-weight: 700; color: var(--text-dark);">Tài khoản hiện tại</p>
+                        <div class="sync-status-row">
+                            <div class="sync-user-block">
+                                <div class="sync-platform-icon fb-color" id="sync-source-icon-1">
+                                    <i class="bi bi-facebook"></i>
+                                </div>
+                                <div class="sync-user-info-text">
+                                    <span class="sync-user-name">Nguyễn Văn A</span>
+                                    <span class="sync-user-id" id="sync-source-id-1">fb.25124</span>
+                                </div>
+                            </div>
+                            
+                            <div class="sync-arrows" id="sync-connection-arrow">
+                                <i class="bi bi-arrow-left-right"></i>
+                            </div>
+                            
+                            <div class="sync-user-block" id="sync-mye-side">
+                                <div class="sync-platform-icon mye-color">
+                                    <i class="bi bi-person-fill"></i>
+                                </div>
+                                <div class="sync-user-info-text">
+                                    <span class="sync-user-name" id="sync-mye-label-name" style="color: #8888aa; font-weight: 500;">Chưa có tài khoản MyE</span>
+                                </div>
+                            </div>
+                            
+                            <div class="sync-action-btn-wrap">
+                                <button class="btn-sync-trigger" id="btn-sync-action">Chưa đồng bộ</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STATE 2: EDITING SYNC FORM CONTAINER -->
+                    <div class="sync-form-container-custom" id="sync-form-container" style="display: none;">
+                        <p class="sync-intro-text text-start mb-3" style="font-size: 0.8rem; font-weight: 700; color: var(--text-dark);">Tài khoản hiện tại</p>
+                        
+                        <!-- Single identity Facebook card -->
+                        <div class="sync-fb-single-card mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="sync-platform-icon fb-color" id="sync-source-icon-2" style="width: 40px; height: 40px; border-radius: 50%; background: #1877f2; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                                    <i class="bi bi-facebook"></i>
+                                </div>
+                                <span class="sync-user-name" style="font-weight: 700; color: var(--text-dark); font-size: 0.88rem;">Nguyễn Văn A</span>
+                            </div>
+                            <span class="sync-user-id-right" id="sync-source-id-2">fb.25124</span>
+                        </div>
+
+                        <h4 class="sync-form-title-custom">Đồng bộ tài khoản MYE</h4>
+                        <p class="sync-form-subtitle-custom">Chỉ đồng bộ được tài khoản MYE chưa có dữ liệu trong Game. Sau khi đồng bộ, bạn có thể đăng nhập bằng Facebook hoặc tài khoản MYE</p>
+                        
+                        <div class="mb-3 text-start">
+                            <label class="form-label sync-form-label-custom" for="sync-mye-username">Tạo tên đăng nhập MYE</label>
+                            <input type="text" class="mye-input" id="sync-mye-username" placeholder="Tối thiểu 6 ký tự">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label class="form-label sync-form-label-custom" for="sync-mye-password">Tạo mật khẩu</label>
+                            <input type="password" class="mye-input" id="sync-mye-password" placeholder="Tối thiểu 8 ký tự">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label class="form-label sync-form-label-custom" for="sync-mye-confirm-password">Xác nhận lại mật khẩu</label>
+                            <input type="password" class="mye-input" id="sync-mye-confirm-password" placeholder="Tối thiểu 8 ký tự">
+                        </div>
+                        
+                        <button class="btn-confirm-sync-custom mt-2" id="btn-confirm-sync">Xác nhận đồng bộ</button>
+                    </div>
+
+                    <!-- STATE 3: SYNCED SUCCESS STATE CONTAINER -->
+                    <div class="sync-success-container" id="sync-success-banner" style="display: none;">
+                        <p class="sync-intro-text text-start mb-3" style="font-size: 0.8rem; font-weight: 700; color: var(--text-dark);">Tài khoản hiện tại</p>
+                        
+                        <!-- Facebook card -->
+                        <div class="sync-fb-single-card mb-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="sync-platform-icon fb-color" id="sync-source-icon-3" style="width: 40px; height: 40px; border-radius: 50%; background: #1877f2; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                                    <i class="bi bi-facebook"></i>
+                                </div>
+                                <span class="sync-user-name" style="font-weight: 700; color: var(--text-dark); font-size: 0.88rem;">Nguyễn Văn A</span>
+                            </div>
+                            <span class="sync-user-id-right" id="sync-source-id-3">fb.25124</span>
+                        </div>
+
+                        <!-- Divider with Synced Badge -->
+                        <div class="sync-divider-wrap mb-3">
+                            <div class="sync-dotted-line"></div>
+                            <span class="sync-badge-done">Đã đồng bộ</span>
+                            <div class="sync-dotted-line"></div>
+                        </div>
+
+                        <!-- MyE Account card -->
+                        <div class="sync-mye-single-card mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="sync-platform-icon mye-color-outline" style="width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid #d1d5db; color: #0c359e; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; background: #ffffff;">
+                                    <i class="bi bi-person-fill"></i>
+                                </div>
+                                <span class="sync-user-name" style="font-weight: 700; color: var(--text-dark); font-size: 0.88rem;">Tài khoản MYE</span>
+                            </div>
+                            <span class="sync-user-id-right" id="success-mye-username">myepro456</span>
+                        </div>
+
+                        <!-- Success message bar -->
+                        <div class="sync-success-bar-custom">
+                            <i class="bi bi-check-circle-fill" style="color: #2e7d32; font-size: 1rem; flex-shrink: 0;"></i>
+                            <span>Tài khoản đã được đồng bộ. Bạn có thể đăng nhập bằng tài khoản Facebook hoặc tài khoản MYE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Lịch sử hoạt động -->
+            <div class="content-panel mt-4" id="activity-history-card">
+                <div class="panel-header" id="activity-header-toggle" style="cursor: pointer;">
+                    <div class="panel-icon-circle">
+                        <img src="../images/streamline-kameleon-color_tease-smiley.png" alt="Mascot Emoji" class="panel-avatar-emoji">
+                    </div>
+                    <div class="flex-grow-1 ms-3 text-start">
+                        <h2 class="panel-title-custom">Lịch sử hoạt động</h2>
+                    </div>
+                    <div class="panel-toggle-arrow-circle" id="activity-arrow-wrap">
+                        <i class="bi bi-chevron-right" id="activity-arrow-icon" style="display: inline-block; transition: transform 0.2s;"></i>
+                    </div>
+                </div>
+                
+                <!-- Body Content -->
+                <div class="activity-body-content" id="activity-body-content" style="display: none; padding: 20px 24px 24px 96px; border-top: 1px solid var(--border); background: #ffffff;">
+                    <!-- Title & Alert Section -->
+                    <div class="activity-promo-header text-start mb-3">
+                        <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--text-dark); margin-bottom: 2px;">Gỡ tất cả các phiên đăng nhập đã lưu</h4>
+                        <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 12px;">Tăng cường kiểm soát và bảo vệ tài khoản của bạn</p>
+                    </div>
+
+                    <!-- Alert Box with Button -->
+                    <div class="remove-sessions-alert-box" style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1px solid #e2e5ef; border-radius: 12px; padding: 18px 24px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); gap: 20px;">
+                        <div class="text-start">
+                            <p style="font-size: 0.83rem; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; line-height: 1.45;">
+                                Khi thực hiện thao tác này, các thiết bị đang đăng nhập sẽ bị đăng xuất.<br>
+                                Bạn sẽ cần phải đăng nhập lại.
+                            </p>
+                            <p style="font-size: 0.72rem; color: var(--text-muted); font-style: italic; margin-bottom: 0; line-height: 1.4;">
+                                Lưu ý: Để đảm bảo an toàn tài khoản, vui lòng thay đổi mật khẩu trước khi tiến hành gỡ toàn bộ các phiên bản đăng nhập trên mọi thiết bị.
+                            </p>
+                        </div>
+                        <div style="flex-shrink: 0;">
+                            <button class="btn-remove-all-sessions" id="btn-remove-all-sessions" style="background: #ffffff; color: var(--accent); border: 1.5px solid var(--accent); padding: 8px 20px; border-radius: 6px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; white-space: nowrap;">Gỡ tất cả</button>
+                        </div>
+                    </div>
+
+                    <!-- Activity Table -->
+                    <div class="table-responsive">
+                        <table class="activity-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid var(--accent);">
+                                    <th style="padding: 10px 0 15px 0; font-size: 0.85rem; font-weight: 800; color: var(--text-dark); width: 28%;">Thời gian</th>
+                                    <th style="padding: 10px 0 15px 0; font-size: 0.85rem; font-weight: 800; color: var(--text-dark); width: 32%;">Hoạt động</th>
+                                    <th style="padding: 10px 0 15px 0; font-size: 0.85rem; font-weight: 800; color: var(--text-dark); width: 25%;">Thiết bị</th>
+                                    <th style="padding: 10px 0 15px 0; font-size: 0.85rem; font-weight: 800; color: var(--text-dark); width: 15%;">IP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #eef1f6;">
+                                    <td style="padding: 16px 0; font-size: 0.8rem; color: var(--text-mid); font-weight: 500;">
+                                        <i class="bi bi-clock" style="color: var(--primary); font-size: 0.88rem; margin-right: 6px;"></i> 02/06/2026 08:53:18
+                                    </td>
+                                    <td style="padding: 16px 0; font-size: 0.8rem; color: var(--text-mid); font-weight: 500;">Kích hoạt tài khoản</td>
+                                    <td style="padding: 16px 0;">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" alt="Chrome Logo" style="width: 28px; height: 28px; object-fit: contain;">
+                                            <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.3;">
+                                                <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-dark);">Chrome Mobile</span>
+                                                <span style="font-size: 0.68rem; color: var(--text-muted); font-weight: 500;">Mobile</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 16px 0; font-size: 0.8rem; color: var(--text-mid); font-weight: 500;">210.86.237.19</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eef1f6;">
+                                    <td style="padding: 16px 0; font-size: 0.8rem; color: var(--text-mid); font-weight: 500;">
+                                        <i class="bi bi-clock" style="color: var(--primary); font-size: 0.88rem; margin-right: 6px;"></i> 02/06/2026 08:52:18
+                                    </td>
+                                    <td style="padding: 16px 0; font-size: 0.8rem; color: var(--text-mid); font-weight: 500;">Cập nhật thông tin tài khoản</td>
+                                    <td style="padding: 16px 0;">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/safari/safari-original.svg" alt="Safari Logo" style="width: 28px; height: 28px; object-fit: contain;">
+                                            <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.3;">
+                                                <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-dark);">Safari</span>
+                                                <span style="font-size: 0.68rem; color: var(--text-muted); font-weight: 500;">Macbook</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 16px 0; font-size: 0.8rem; color: var(--text-mid); font-weight: 500;">210.86.237.19</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- === BẢO MẬT TAB (hidden by default) === -->
+        <div class="tab-pane" id="tab-security" style="display: none;">
+            <div class="content-panel">
+                <div class="panel-header">
+                    <div class="panel-icon-circle" style="background: #e8f5e9;">
+                        <img src="../images/streamline-kameleon-color_tease-smiley.png" alt="Mascot Emoji" class="panel-avatar-emoji">
+                    </div>
+                    <div class="flex-grow-1 ms-3 text-start">
+                        <h2 class="panel-title-custom">Bảo Mật Tài Khoản</h2>
+                    </div>
+                </div>
+                <div class="security-body">
+                    <div class="security-item" id="sec-password">
+                        <div class="security-item-info">
+                            <div class="sec-item-icon"><i class="bi bi-key-fill"></i></div>
+                            <div>
+                                <div class="sec-item-title">Mật khẩu</div>
+                                <div class="sec-item-sub">Cập nhật lần cuối: 15/06/2024</div>
+                            </div>
+                        </div>
+                        <button class="btn-sec-action" id="btn-change-pw">Đổi mật khẩu</button>
+                    </div>
+                    <div class="security-item" id="sec-2fa">
+                        <div class="security-item-info">
+                            <div class="sec-item-icon"><i class="bi bi-phone-fill"></i></div>
+                            <div>
+                                <div class="sec-item-title">Xác thực 2 yếu tố (2FA)</div>
+                                <div class="sec-item-sub">Bảo vệ tài khoản bằng OTP</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="status-badge success">Đã bật</span>
+                            <button class="btn-sec-action btn-sec-danger" id="btn-toggle-2fa">Tắt</button>
+                        </div>
+                    </div>
+                    <div class="security-item" id="sec-email-verify">
+                        <div class="security-item-info">
+                            <div class="sec-item-icon"><i class="bi bi-envelope-check-fill"></i></div>
+                            <div>
+                                <div class="sec-item-title">Xác thực Email</div>
+                                <div class="sec-item-sub">nguyenvana@email.com</div>
+                            </div>
+                        </div>
+                        <span class="status-badge success">Đã xác thực</span>
+                    </div>
+                    <div class="security-item" id="sec-phone-verify">
+                        <div class="security-item-info">
+                            <div class="sec-item-icon"><i class="bi bi-telephone-fill"></i></div>
+                            <div>
+                                <div class="sec-item-title">Xác thực Số điện thoại</div>
+                                <div class="sec-item-sub">0901 234 567</div>
+                            </div>
+                        </div>
+                        <span class="status-badge success">Đã xác thực</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- === LỊCH SỬ GIAO DỊCH TAB (hidden by default) === -->
+        <div class="tab-pane" id="tab-transactions" style="display: none;">
+            <div class="content-panel">
+                <div class="panel-header d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <div class="panel-icon-circle" style="background: #fff3e0;">
+                            <img src="../images/streamline-kameleon-color_tease-smiley.png" alt="Mascot Emoji" class="panel-avatar-emoji">
+                        </div>
+                        <div class="flex-grow-1 ms-3 text-start">
+                            <h2 class="panel-title-custom">Lịch Sử Giao Dịch</h2>
+                        </div>
+                    </div>
+                    <a href="Thong_tin_giao_dich.html" class="btn-view-all">
+                        Xem tất cả <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table gd-table" id="account-tx-table">
+                        <thead>
+                            <tr>
+                                <th>Mã GD</th>
+                                <th>Sản phẩm</th>
+                                <th>Số tiền</th>
+                                <th>Thời gian</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-id">#MYE001234</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="../images/thong_tin_giao_dich/Chon_goi_nap/100_MYE_COIN.png" class="td-thumb" alt="100 coin">
+                                        <span>100 MyE Coin</span>
+                                    </div>
+                                </td>
+                                <td class="gold-text fw-bold">100.000đ</td>
+                                <td class="td-time">20/07/2024 21:05</td>
+                                <td><span class="status-badge success">Thành công</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td-id">#MYE001233</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="../images/thong_tin_giao_dich/Chon_goi_nap/500_MYE_COIN.png" class="td-thumb" alt="500 coin">
+                                        <span>500 MyE Coin</span>
+                                    </div>
+                                </td>
+                                <td class="gold-text fw-bold">500.000đ</td>
+                                <td class="td-time">20/07/2024 20:30</td>
+                                <td><span class="status-badge pending">Đang xử lý</span></td>
+                            </tr>
+                            <tr>
+                                <td class="td-id">#MYE001232</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="../images/thong_tin_giao_dich/Chon_goi_nap/2000_MYE_COIN.png" class="td-thumb" alt="2000 coin">
+                                        <span>2.000 MyE Coin</span>
+                                    </div>
+                                </td>
+                                <td class="gold-text fw-bold">2.000.000đ</td>
+                                <td class="td-time">18/07/2024 14:22</td>
+                                <td><span class="status-badge success">Thành công</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="site-footer">
+    <div class="container-xl">
+        <div class="footer-content">
+            <img src="../images/logo.png" alt="MyE Logo" class="footer-logo-centered">
+            <div class="footer-info-centered">
+                <p>Email: hotro@mye.vn</p>
+                <p>Hotline: 0902 500 198</p>
+                <h5 class="footer-company-name">CÔNG TY CỔ PHẦN MYE</h5>
+                <p>Chịu trách nhiệm quản lý nội dung: Ông Lâm Trung Hiệp</p>
+                <p>Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</p>
+                <p>Giấy phép G1 số: Số 297/GP-BTTTT, Ngày cấp 14/07/2020, Nơi cấp Bộ Thông Tin và Truyền Thông</p>
+                <p class="footer-policy-links">
+                    <a href="#">Điều khoản dịch vụ</a> | <a href="#">Chính sách bảo mật</a>
+                </p>
+                <p class="footer-copyright">©Copyright © 2026 MYE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Authentication JS -->
+<script src="../assets/js/auth.js"></script>
+<!-- Custom JS -->
+<script src="../assets/js/Tai_khoan.js"></script>
+</body>
+</html>

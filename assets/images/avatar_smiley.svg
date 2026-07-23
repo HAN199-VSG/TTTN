@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Background cyan circle -->
+  <circle cx="50" cy="50" r="50" fill="#00aad4"/>
+  <!-- Yellow face circle -->
+  <circle cx="50" cy="55" r="32" fill="#ffd000"/>
+  <!-- Smiling eyes -->
+  <path d="M33 48 C36 43, 40 43, 43 48" stroke="#1d1d1b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <path d="M57 48 C60 43, 64 43, 67 48" stroke="#1d1d1b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <!-- Smile line -->
+  <path d="M36 60 Q50 72 64 60" stroke="#1d1d1b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <!-- Tongue sticking out -->
+  <path d="M43 66 C43 76, 57 76, 57 66 Z" fill="#ff4858"/>
+  <path d="M43 66 C43 76, 57 76, 57 66" stroke="#1d1d1b" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Line in the middle of tongue -->
+  <line x1="50" y1="66" x2="50" y2="72" stroke="#1d1d1b" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

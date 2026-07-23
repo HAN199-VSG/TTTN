@@ -1,0 +1,639 @@
+/* ============================
+   Nap_game.css
+   Theme: LIGHT (theo Figma)
+============================ */
+
+:root {
+    --primary: #1A4FBC;
+    --primary-dark: #0d3a99;
+    --accent: #FF6B00;
+    --accent-hover: #e05c00;
+    --bg-page: #f4f5f8;
+    --bg-white: #ffffff;
+    --text-dark: #1a1a2e;
+    --text-mid: #4a4a6a;
+    --text-muted: #9094a4;
+    --border: #e2e5ef;
+    --header-bg: #ffffff;
+    --header-text: #1a1a2e;
+    --title-color: #1a4fbc;
+    --tab-active-bg: #1a4fbc;
+    --tab-active-text: #ffffff;
+    --tab-inactive-bg: #f0f2f9;
+    --tab-inactive-text: #4a4a6a;
+    --card-shadow: 0 2px 12px rgba(26,79,188,0.10);
+    --card-hover-shadow: 0 8px 30px rgba(26,79,188,0.22);
+    --transition: all 0.25s ease;
+    --radius: 10px;
+    --radius-lg: 14px;
+}
+
+/* --- RESET --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; padding: 0; margin: 0; }
+img { max-width: 100%; height: auto; }
+
+/* ============================
+   HEADER
+============================ */
+.site-header {
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    border-bottom: 1px solid var(--border);
+}
+
+#main-navbar {
+    padding: 0;
+    min-height: 52px;
+}
+
+.logo-img {
+    height: 38px;
+    width: auto;
+    filter: brightness(1.1);
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+    color: #3a3a5c !important;
+    font-weight: 500;
+    font-size: 0.92rem;
+    padding: 14px 16px !important;
+    position: relative;
+    transition: var(--transition);
+    letter-spacing: 0.01em;
+}
+.navbar-nav .nav-link:hover {
+    color: var(--primary) !important;
+}
+.navbar-nav .nav-link.active {
+    color: var(--accent) !important;
+    font-weight: 700;
+}
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    right: 16px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px 3px 0 0;
+}
+
+/* Header buttons */
+.btn-giaodich-header {
+    color: #3a3a5c;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    background: var(--bg-page);
+}
+.btn-giaodich-header:hover {
+    color: var(--primary);
+    background: #e8edfc;
+    border-color: var(--primary);
+}
+
+/* === Button Đăng Nhập dùng ảnh === */
+.btn-dangnhap-img {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.btn-dangnhap-img:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+.btn-dangnhap-img:active {
+    transform: translateY(0) scale(0.97);
+}
+.btn-dangnhap-png {
+    height: 36px;
+    width: auto;
+    display: block;
+}
+.btn-dangnhap-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    pointer-events: none;
+    line-height: 1;
+}
+
+.navbar-toggler {
+    border-color: var(--border);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2858,58,92,0.8%29' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile collapse */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: #ffffff;
+        border-top: 1px solid var(--border);
+        padding: 10px 0 16px;
+    }
+    .navbar-nav .nav-link.active::after { display: none; }
+    .d-flex.align-items-center { padding: 8px 16px; gap: 10px; }
+}
+
+/* ============================
+   HERO BANNER
+ ============================ */
+.hero-banner {
+    width: 100%;
+    background-color: #06091a;
+    padding: 30px 0;
+    position: relative;
+}
+.hero-banner-card {
+    position: relative;
+    max-height: 380px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.btn-lichsu-banner {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 42px;
+    background: rgba(10, 20, 50, 0.85);
+    border: 1.5px solid rgba(26, 79, 188, 0.4);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 0 12px rgba(26, 79, 188, 0.2);
+    transition: var(--transition);
+}
+.btn-lichsu-banner:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 79, 188, 0.5);
+    color: #ffffff;
+}
+.btn-lichsu-banner:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 991.98px) {
+    .hero-banner {
+        padding: 20px 0;
+    }
+    .btn-lichsu-banner {
+        width: 170px;
+        height: 38px;
+        font-size: 0.76rem;
+        bottom: 12px;
+        right: 12px;
+    }
+}
+
+/* ============================
+   MAIN CONTENT
+============================ */
+.main-content {
+    padding: 28px 0 48px;
+}
+
+/* === Section Header: Title + Search === */
+.game-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.game-list-title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--title-color);
+    letter-spacing: 0.03em;
+    position: relative;
+    padding-left: 14px;
+}
+.game-list-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 70%;
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+.search-wrap {
+    position: relative;
+    width: 220px;
+    flex-shrink: 0;
+}
+.search-icon {
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    pointer-events: none;
+}
+.search-input {
+    width: 100%;
+    background: var(--bg-white);
+    border: 1.5px solid var(--border);
+    color: var(--text-dark);
+    padding: 7px 12px 7px 30px;
+    border-radius: 8px;
+    font-size: 0.83rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    transition: var(--transition);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26,79,188,0.12);
+}
+.search-input::placeholder { color: var(--text-muted); }
+
+/* === FILTER TABS === */
+.filter-tabs-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filter-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    color: #4a4a6a;
+    border: 1.5px solid #dcdde2;
+    padding: 7px 18px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.03em;
+}
+.filter-tab:hover {
+    border-color: #1a1a2e;
+    color: #1a1a2e;
+    background: #ffffff;
+}
+.filter-tab.active {
+    background: #ffffff;
+    border-color: #1a1a2e;
+    color: #1a1a2e;
+    box-shadow: none;
+}
+
+.tab-badge {
+    background: #eef0f6;
+    color: #777799;
+    padding: 1px 7px;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    min-width: 22px;
+    text-align: center;
+    line-height: 1.5;
+    margin-left: 4px;
+}
+.filter-tab.active .tab-badge {
+    background: #e1e3ea;
+    color: #1a1a2e;
+}
+.filter-tab:not(.active) .tab-badge {
+    background: #eef0f6;
+    color: #777799;
+}
+
+/* ============================
+   GAME GRID â€” 5 cá»™t
+============================ */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 44px;
+    margin-bottom: 24px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Game Item */
+.game-card-link { display: block; }
+
+.game-card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+    transition: var(--transition);
+}
+.game-card:hover {
+    transform: translateY(-5px);
+}
+.game-card:hover .game-thumb-wrap {
+    box-shadow: 0 10px 25px rgba(26, 79, 188, 0.22);
+}
+
+/* Thumbnail */
+.game-thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #e8ecf5;
+    border-radius: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+.game-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+.game-card:hover .game-thumb {
+    transform: scale(1.06);
+}
+
+/* Hover overlay */
+.game-hover-overlay {
+    display: none !important;
+}
+.btn-nap-now {
+    background: var(--accent);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    transform: translateY(8px);
+    transition: transform 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.game-card:hover .btn-nap-now {
+    transform: translateY(0);
+}
+
+/* Star Badge (top-left) */
+.game-star-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #d32f2f;
+    border: 1.5px solid #FFD700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.game-star-badge i {
+    color: #FFD700;
+    font-size: 9px;
+    line-height: 1;
+    display: block;
+}
+
+/* Publisher Watermark Badge (bottom-right) */
+.pub-badge-m {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e2e5ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff3d00;
+    font-weight: 800;
+    font-size: 9px;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+.pub-badge-mye {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e2e5ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+.pub-badge-mye img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Game Info */
+.game-info {
+    padding: 10px 0 0 0;
+    background: transparent;
+}
+.game-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+/* ============================
+   PAGINATION DOTS
+============================ */
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0 4px;
+}
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1A4FBC;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    display: inline-block;
+}
+.dot.active {
+    background: var(--accent);
+    width: 22px;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(255,107,0,0.3);
+}
+.dot:hover {
+    background: var(--accent);
+    transform: scale(1.2);
+}
+
+/* ============================
+   FOOTER (Centered Figma style)
+============================ */
+.site-footer {
+    background: #f4f5f8;
+    border-top: 1px solid #e2e5ef;
+    padding: 40px 20px;
+    text-align: center;
+    color: #4a4a6a;
+    width: 100%;
+}
+.footer-logo-centered {
+    height: 48px;
+    width: auto;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.footer-info-centered {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.footer-info-centered p {
+    font-size: 0.8rem;
+    color: #555577;
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+.footer-company-name {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 12px 0 8px 0;
+    letter-spacing: 0.02em;
+}
+.footer-policy-links a {
+    color: #555577;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+.footer-policy-links a:hover {
+    color: #0056FF;
+}
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #8888aa;
+    margin-top: 14px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 1199.98px) {
+    .game-grid { grid-template-columns: repeat(5, 1fr); gap: 24px; }
+}
+@media (max-width: 991.98px) {
+    .game-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+}
+@media (max-width: 767.98px) {
+    .hero-banner { padding: 15px 0; }
+    .hero-banner-card { max-height: 200px; }
+    .btn-lichsu-banner {
+        width: 150px;
+        height: 34px;
+        font-size: 0.72rem;
+        bottom: 12px;
+        right: 12px;
+    }
+    .game-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .filter-tabs-wrap { gap: 4px; }
+    .filter-tab { padding: 5px 10px; font-size: 0.72rem; }
+    .search-wrap { width: 160px; }
+    .footer-top-row { gap: 24px; }
+}
+@media (max-width: 575.98px) {
+    .btn-lichsu-banner {
+        width: 130px;
+        height: 32px;
+        font-size: 0.68rem;
+        bottom: 8px;
+        right: 8px;
+    }
+    .game-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .game-list-title { font-size: 1rem; }
+    .search-wrap { width: 140px; }
+}
+

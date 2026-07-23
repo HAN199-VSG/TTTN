@@ -1,0 +1,12 @@
+{
+  "name": "mye-recharge-portal",
+  "version": "1.0.0",
+  "description": "Cổng nạp game chính thức MyE",
+  "scripts": {
+    "dev": "npx -y live-server --port=5500",
+    "start": "npx -y live-server --port=5500"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
